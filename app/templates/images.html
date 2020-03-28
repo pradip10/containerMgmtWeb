@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="home">
+	  <h3 align="center"><b>Images available on the system</b></h3>
+     <body>
+      <table border = 1>
+	    <tr>
+               <th> Images </th>
+               <th> Size[MB] </th>
+            </tr>
+         {% for i in result %}
+            <tr>
+               <td> {{ i['RepoTags'] }} </td>
+               <td> {{ i['Size']/1000000 }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+  </div>
+{% endblock %}

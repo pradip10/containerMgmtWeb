@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="home">
+	  <h3 align="center"><b>Container Shutdown status</b></h3>
+     <body>
+      <table border = 1>
+            <tr>
+		    <th>container ID</th><td> {{ containerID }} </td>
+            </tr>
+	    <tr>
+                    <th>Exit Status</th><td> {{ returnCode }} </td>
+            </tr>
+      </table>
+   </body>
+  </div>
+{% endblock %}
